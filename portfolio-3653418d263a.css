@@ -1570,3 +1570,207 @@ body::before {
     grid-column: 1 / -1;
   }
 }
+
+/* Journey and education */
+.journey-section {
+  padding-block: 58px 72px;
+  border-top: 1px solid var(--line);
+}
+
+.journey-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 36px;
+  margin-bottom: 48px;
+}
+
+.journey-heading h2,
+.education-heading h2,
+.education-card h3 {
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+}
+
+.journey-heading h2 {
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(32px, 3.8vw, 58px);
+  font-weight: 550;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  text-align: right;
+}
+
+.journey-scroll {
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--acid) transparent;
+}
+
+.journey-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(210px, 1fr));
+  min-width: 900px;
+}
+
+.journey-track::before {
+  position: absolute;
+  top: 9px;
+  right: 7%;
+  left: 7%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--acid), var(--blue));
+  content: "";
+}
+
+.journey-step {
+  position: relative;
+  min-height: 150px;
+  padding: 42px 36px 0 0;
+}
+
+.journey-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 5px solid var(--ink);
+  border-radius: 50%;
+  background: var(--acid);
+  box-shadow: 0 0 0 1px var(--acid);
+}
+
+.journey-step:nth-child(even) .journey-dot {
+  background: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+.journey-period,
+.education-card-top,
+.education-card p {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.journey-period {
+  display: block;
+  margin-bottom: 11px;
+  color: var(--muted);
+}
+
+.journey-step strong {
+  display: block;
+  font-size: 21px;
+  letter-spacing: -0.025em;
+}
+
+.journey-step p {
+  margin: 8px 0 0;
+  color: #5f5c67;
+  font-size: 13px;
+}
+
+.journey-arrow {
+  position: absolute;
+  top: -3px;
+  right: 24px;
+  color: var(--acid);
+  font-size: 20px;
+}
+
+.education-section {
+  background:
+    radial-gradient(circle at 88% 15%, rgba(63, 81, 247, 0.22), transparent 26rem),
+    var(--paper);
+  color: var(--ink);
+}
+
+.education-layout {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: clamp(60px, 9vw, 150px);
+}
+
+.education-heading h2 {
+  margin: 34px 0 0;
+  font-size: clamp(48px, 5.7vw, 88px);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.education-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.education-card {
+  display: flex;
+  min-height: 360px;
+  padding: 30px;
+  border: 1px solid rgba(247, 241, 229, 0.18);
+  border-radius: 22px;
+  background: rgba(247, 241, 229, 0.055);
+  flex-direction: column;
+}
+
+.education-card-top {
+  display: flex;
+  justify-content: space-between;
+  color: #a8a9b3;
+}
+
+.education-card h3 {
+  margin: auto 0 24px;
+  font-size: clamp(30px, 3.2vw, 48px);
+  font-weight: 520;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.education-card strong {
+  color: #e7e0d5;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.education-card p {
+  margin: 12px 0 0;
+  color: #a8a9b3;
+  line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+  .education-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .education-heading {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 700px) {
+  .journey-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .journey-heading h2 {
+    text-align: left;
+  }
+
+  .education-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    min-height: 300px;
+  }
+}
