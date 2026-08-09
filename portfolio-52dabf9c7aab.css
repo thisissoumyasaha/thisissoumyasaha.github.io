@@ -1412,7 +1412,7 @@ body::before {
 }
 
 .monogram {
-  font-size: 16px;
+  font-size: clamp(24px, 2.2vw, 34px);
   font-weight: 720;
   letter-spacing: -0.025em;
 }
@@ -1548,6 +1548,10 @@ body::before {
 }
 
 @media (max-width: 800px) {
+  .monogram {
+    font-size: 21px;
+  }
+
   .hero h1 {
     font-size: clamp(58px, 10.5vw, 82px);
   }
