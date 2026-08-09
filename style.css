@@ -110,6 +110,7 @@ a {
 }
 
 .nav-social,
+.nav-email,
 .nav-resume {
   display: inline-flex;
   gap: 12px;
@@ -1141,6 +1142,7 @@ a {
   }
 
   .nav-social,
+  .nav-email,
   .nav-resume {
     min-height: 34px;
     padding-inline: 9px;
@@ -1427,6 +1429,7 @@ body::before {
 }
 
 .nav-social,
+.nav-email,
 .nav-resume,
 .button {
   border-radius: 999px;
@@ -1777,4 +1780,38 @@ body::before {
   .education-card {
     min-height: 300px;
   }
+}
+
+/* Branded top actions */
+.nav-social {
+  border-color: #0a66c2;
+  background: #0a66c2;
+  color: #fff;
+}
+
+.nav-email {
+  border-color: #ea4335;
+  background: #ea4335;
+  color: #fff;
+}
+
+.nav-resume {
+  border-color: #6d5ce7;
+  background: #6d5ce7;
+  color: #fff;
+}
+
+.nav-actions .nav-social:hover {
+  background: #084f98;
+  color: #fff !important;
+}
+
+.nav-actions .nav-email:hover {
+  background: #c9342a;
+  color: #fff !important;
+}
+
+.nav-actions .nav-resume:hover {
+  background: #5142c7;
+  color: #fff !important;
 }
