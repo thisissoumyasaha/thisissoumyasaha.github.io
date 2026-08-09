@@ -1869,3 +1869,48 @@ body::before {
 .portrait-frame {
   max-height: none;
 }
+
+/* Mobile navigation */
+@media (max-width: 800px) {
+  .nav {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding-block: 12px;
+  }
+
+  .nav-links {
+    display: flex;
+    grid-column: 1 / -1;
+    gap: 28px;
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px 0 3px;
+    border-top: 1px solid var(--line);
+    overflow-x: auto;
+    font-size: 11px;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-actions {
+    justify-self: start;
+    margin-top: 12px;
+  }
+
+  .nav-links {
+    margin-top: 14px;
+  }
+}
