@@ -1088,6 +1088,22 @@ a {
     width: min(100% - 48px, 1000px);
   }
 
+  .nav-links {
+    gap: 18px;
+    font-size: 10px;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .nav-social,
+  .nav-email,
+  .nav-resume {
+    padding-inline: 9px;
+    font-size: 9px;
+  }
+
   .hero {
     grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.75fr);
     gap: 35px;
@@ -1407,7 +1423,7 @@ body::before {
 }
 
 .hero h1 {
-  font-size: clamp(64px, 6.75vw, 118px);
+  font-size: clamp(54px, 5.8vw, 102px);
   font-weight: 600;
   letter-spacing: -0.06em;
   line-height: 0.88;
@@ -1426,6 +1442,31 @@ body::before {
 .hero-direct,
 .hero-intro {
   color: #45424c;
+}
+
+.hero-intro {
+  max-width: 680px;
+  font-size: clamp(16px, 1.15vw, 19px);
+  letter-spacing: -0.018em;
+  line-height: 1.55;
+}
+
+.hero-intro p {
+  margin: 0 0 16px;
+}
+
+.hero-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-intro a {
+  border-bottom: 1px solid rgba(63, 81, 247, 0.4);
+  color: var(--acid);
+  font-weight: 680;
+}
+
+.hero-intro a:hover {
+  border-color: var(--acid);
 }
 
 .nav-social,
@@ -1556,13 +1597,13 @@ body::before {
   }
 
   .hero h1 {
-    font-size: clamp(58px, 10.5vw, 82px);
+    font-size: clamp(50px, 9vw, 72px);
   }
 }
 
 @media (max-width: 500px) {
   .hero h1 {
-    font-size: clamp(54px, 14vw, 66px);
+    font-size: clamp(48px, 12.5vw, 60px);
   }
 
   .research-profiles {
@@ -1814,4 +1855,17 @@ body::before {
 .nav-actions .nav-resume:hover {
   background: #5142c7;
   color: #fff !important;
+}
+
+/* Balanced portrait card */
+.portrait-wrap {
+  align-self: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 0;
+  padding: 24px;
+}
+
+.portrait-frame {
+  max-height: none;
 }
