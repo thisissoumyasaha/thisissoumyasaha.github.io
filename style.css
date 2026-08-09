@@ -828,6 +828,27 @@ a {
   transform: translate(5px, -5px);
 }
 
+.scholar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 84px;
+  padding: 22px 26px;
+  background: var(--acid);
+  color: var(--ink);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transition: background 180ms ease;
+}
+
+.scholar-row:hover {
+  background: var(--paper);
+}
+
 .about-section {
   background: var(--paper);
   color: var(--ink);
