@@ -828,14 +828,22 @@ a {
   transform: translate(5px, -5px);
 }
 
-.scholar-row {
+.research-profiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  overflow: hidden;
+  border-radius: 0 0 18px 18px;
+  background: var(--line);
+}
+
+.profile-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
   min-height: 84px;
   padding: 22px 26px;
-  background: var(--acid);
   color: var(--ink);
   font-family: var(--font-geist-mono), monospace;
   font-size: 11px;
@@ -845,8 +853,59 @@ a {
   transition: background 180ms ease;
 }
 
-.scholar-row:hover {
+.profile-google {
+  background: var(--acid);
+}
+
+.profile-semantic {
+  background: var(--blue);
+}
+
+.profile-link:hover {
   background: var(--paper);
+}
+
+.patent-list {
+  padding-top: 42px;
+}
+
+.patent-heading {
+  margin: 0;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.patent {
+  display: grid;
+  grid-template-columns: 170px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  min-height: 118px;
+  padding-block: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.patent > span {
+  color: var(--blue);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+
+.patent strong {
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(21px, 2vw, 30px);
+  font-weight: 520;
+  letter-spacing: -0.025em;
+}
+
+.patent:hover strong {
+  color: var(--acid);
 }
 
 .about-section {
@@ -1300,5 +1359,202 @@ a {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Editorial cobalt theme */
+:root {
+  --ink: #f7f1e5;
+  --ink-soft: #eee7db;
+  --paper: #17181d;
+  --muted: #6c6975;
+  --line: rgba(23, 24, 29, 0.16);
+  --acid: #3f51f7;
+  --blue: #ff665f;
+}
+
+html {
+  background: var(--ink);
+}
+
+body {
+  background:
+    radial-gradient(circle at 82% 7%, rgba(63, 81, 247, 0.16), transparent 25rem),
+    radial-gradient(circle at 10% 68%, rgba(255, 102, 95, 0.09), transparent 30rem),
+    var(--ink);
+  color: var(--paper);
+}
+
+body::before {
+  background-image:
+    linear-gradient(rgba(23, 24, 29, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 24, 29, 0.045) 1px, transparent 1px);
+}
+
+.hero h1,
+.section-heading h2,
+.research-lead h2,
+.about-title h2,
+.approach-lead h2,
+.voices-heading h2,
+.work-copy h3,
+.publication-main strong,
+.voice-card p,
+.about-intro {
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+}
+
+.hero h1 {
+  font-weight: 600;
+  letter-spacing: -0.06em;
+}
+
+.monogram {
+  font-size: 16px;
+  font-weight: 720;
+  letter-spacing: -0.025em;
+}
+
+.signal {
+  box-shadow: 0 0 0 5px rgba(63, 81, 247, 0.12), 0 0 24px rgba(63, 81, 247, 0.6);
+}
+
+.hero-direct,
+.hero-intro {
+  color: #45424c;
+}
+
+.nav-social,
+.nav-resume,
+.button {
+  border-radius: 999px;
+}
+
+.nav-resume,
+.button-primary,
+.profile-link {
+  color: var(--ink);
+}
+
+.portrait-wrap {
+  border-radius: 28px;
+  background: rgba(228, 229, 255, 0.8);
+  box-shadow: 0 24px 80px rgba(63, 81, 247, 0.12);
+}
+
+.portrait-frame {
+  border-radius: 18px;
+  background: #d9dcff;
+}
+
+.portrait-grid {
+  opacity: 0.5;
+}
+
+.strengths {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.strength-card,
+.strength-card:first-child {
+  border-color: rgba(247, 241, 229, 0.16);
+}
+
+.strength-card > span {
+  color: #9799a5;
+}
+
+.strength-card p {
+  color: #b8bac4;
+}
+
+.nova-callout {
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(63, 81, 247, 0.08), transparent 54%),
+    rgba(255, 255, 255, 0.74);
+  box-shadow: 0 24px 70px rgba(63, 81, 247, 0.09);
+}
+
+.nova-callout p,
+.work-copy > p {
+  color: #514e59;
+}
+
+.work-item:hover {
+  background: rgba(63, 81, 247, 0.055);
+}
+
+.voices-section {
+  background:
+    radial-gradient(circle at 86% 12%, rgba(255, 102, 95, 0.18), transparent 24rem),
+    #e8e5ff;
+}
+
+.voices-grid {
+  gap: 14px;
+  border: 0;
+}
+
+.voice-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.voice-card p {
+  color: var(--paper);
+}
+
+.marquee {
+  border-color: rgba(23, 24, 29, 0.25);
+  background: var(--acid);
+  color: var(--ink);
+}
+
+.publication:hover {
+  color: var(--acid);
+}
+
+.about-section {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.about-section .section-kicker,
+.education-grid span,
+.education-grid p {
+  color: #a8a9b3;
+}
+
+.about-copy > p:not(.about-intro) {
+  color: #c6c7cf;
+}
+
+.education-grid {
+  border-color: rgba(247, 241, 229, 0.2);
+}
+
+.contact-card {
+  border-radius: 28px;
+  background: var(--paper);
+}
+
+.footer {
+  background: var(--ink);
+}
+
+@media (max-width: 500px) {
+  .research-profiles {
+    grid-template-columns: 1fr;
+  }
+
+  .patent {
+    grid-template-columns: 1fr auto;
+  }
+
+  .patent > span {
+    grid-column: 1 / -1;
   }
 }
