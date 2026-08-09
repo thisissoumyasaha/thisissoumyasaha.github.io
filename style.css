@@ -1405,8 +1405,10 @@ body::before {
 }
 
 .hero h1 {
+  font-size: clamp(64px, 6.75vw, 118px);
   font-weight: 600;
   letter-spacing: -0.06em;
+  line-height: 0.88;
 }
 
 .monogram {
@@ -1545,7 +1547,17 @@ body::before {
   background: var(--ink);
 }
 
+@media (max-width: 800px) {
+  .hero h1 {
+    font-size: clamp(58px, 10.5vw, 82px);
+  }
+}
+
 @media (max-width: 500px) {
+  .hero h1 {
+    font-size: clamp(54px, 14vw, 66px);
+  }
+
   .research-profiles {
     grid-template-columns: 1fr;
   }
